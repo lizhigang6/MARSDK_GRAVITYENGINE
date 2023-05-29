@@ -1,0 +1,6 @@
+use_frameworks!
+target 'MARSDK_GRAVITYENGINE_Tests' do
+  pod 'MARSDK_GRAVITYENGINE', :path => '../'
+  
+  
+end
