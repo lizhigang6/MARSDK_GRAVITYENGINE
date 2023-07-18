@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		DI4XEF37FcKqoK3wfaWv6iNBVNQ=
+		</data>
 		<key>Headers/GEAutoTrackProtocol.h</key>
 		<data>
 		2ZPYyh7pG1NYb/qjn7PfXXVUCx4=
@@ -14,15 +18,15 @@
 		</data>
 		<key>Headers/GEConfig.h</key>
 		<data>
-		E/gK15MBR8oTK63oAyL9OgtKOhw=
+		Z9isONSqqp4p45F24xHI3NJ4bVo=
 		</data>
 		<key>Headers/GEConstant.h</key>
 		<data>
-		VFMRw061mzctIdVwsy+gyDBDtgE=
+		miBCmIaI9KYF4vp9da31UqXLg5g=
 		</data>
 		<key>Headers/GEDeviceInfo.h</key>
 		<data>
-		sF2ePgskg4k+VAFLSARub8dF4wk=
+		oU5z/9WaawGGokeRRL2BJo3J0iM=
 		</data>
 		<key>Headers/GEEditableEventModel.h</key>
 		<data>
@@ -58,7 +62,7 @@
 		</data>
 		<key>Headers/GravityEngineSDK.h</key>
 		<data>
-		5OgVt1r7rLcQyMV8b+Xh2Q9FpX8=
+		gWlcnUCw2nwSUiKoTvavziEx9+4=
 		</data>
 		<key>Headers/GravitySDK.h</key>
 		<data>
@@ -70,7 +74,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		+5b84DeqXyCVN1eR4rky5F+6oLA=
+		xI6y0E7ghp0k6B1gocsOk57MVXY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -105,33 +109,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E/gK15MBR8oTK63oAyL9OgtKOhw=
+			Z9isONSqqp4p45F24xHI3NJ4bVo=
 			</data>
 			<key>hash2</key>
 			<data>
-			lLZCEtqiD/WiOuGV7UZOGbUZaJ7hl5oXb2hBOcrj+TM=
+			234GeCZakxXUhSTWA39M9SQwMFNGoY6wdI8+J0huBzM=
 			</data>
 		</dict>
 		<key>Headers/GEConstant.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VFMRw061mzctIdVwsy+gyDBDtgE=
+			miBCmIaI9KYF4vp9da31UqXLg5g=
 			</data>
 			<key>hash2</key>
 			<data>
-			QaxajunIBWSq4cjcgSQDqz3eulizCcFXdipRfjQpZss=
+			5cL68UkO1/ccgTzIxzv8xMehc+u/ZrWZFk7BGpAaaPM=
 			</data>
 		</dict>
 		<key>Headers/GEDeviceInfo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			sF2ePgskg4k+VAFLSARub8dF4wk=
+			oU5z/9WaawGGokeRRL2BJo3J0iM=
 			</data>
 			<key>hash2</key>
 			<data>
-			bZ+N2IeGYYCbSl3JSrD5JhsLkcq6dgr7tDrRMwgehmk=
+			qHkjPPLkfQa562ua3b1XSplvYbXo1i5A8jLLVT/LwpI=
 			</data>
 		</dict>
 		<key>Headers/GEEditableEventModel.h</key>
@@ -226,11 +230,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5OgVt1r7rLcQyMV8b+Xh2Q9FpX8=
+			gWlcnUCw2nwSUiKoTvavziEx9+4=
 			</data>
 			<key>hash2</key>
 			<data>
-			v6b5qtOvWbfQWwlnmFQjymgzpFBDCL9NKxdIgbmOIOA=
+			chic5LKjMgIwxuSSvZ7dO7DDsea2JC3zNvBcOsYjqlA=
 			</data>
 		</dict>
 		<key>Headers/GravitySDK.h</key>

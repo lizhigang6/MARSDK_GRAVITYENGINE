@@ -30,6 +30,7 @@ FOUNDATION_EXTERN NSString *const VERSION;
 
 + (NSTimeInterval)uptime;
 
+- (NSString*)ge_iphoneType;
 @end
 
 NS_ASSUME_NONNULL_END

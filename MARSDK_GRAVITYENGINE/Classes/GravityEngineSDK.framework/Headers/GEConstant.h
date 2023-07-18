@@ -147,7 +147,7 @@ typedef NS_OPTIONS(NSInteger, GravityEngineAutoTrackEventType) {
     /**
      All  Events
      */
-    GravityEngineEventTypeAll    = GravityEngineEventTypeAppStart | GravityEngineEventTypeAppEnd | GravityEngineEventTypeAppClick | GravityEngineEventTypeAppInstall | GravityEngineEventTypeAppViewCrash | GravityEngineEventTypeAppViewScreen
+    GravityEngineEventTypeAll    = GravityEngineEventTypeAppStart | GravityEngineEventTypeAppEnd | GravityEngineEventTypeAppClick | GravityEngineEventTypeAppInstall | GravityEngineEventTypeAppViewScreen
 
 };
 

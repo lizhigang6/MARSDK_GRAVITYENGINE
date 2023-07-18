@@ -42,8 +42,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- SDK VERSION = 4.2.1
- ThinkingData API
+ SDK VERSION = 4.3.1
+ GravityEngine API
  
  ## Initialization
  
@@ -67,7 +67,9 @@ or
 
  */
 
-typedef void (^GECallbackBlock)(NSDictionary *result, NSError * _Nullable error);
+typedef void (^CallbackWithSuccess)(void);
+
+typedef void (^CallbackWithError)(NSError * error);
 
 @interface GravityEngineSDK : NSObject
 
@@ -87,16 +89,6 @@ typedef void (^GECallbackBlock)(NSDictionary *result, NSError * _Nullable error)
   @return SDK instance
   */
 + (nullable GravityEngineSDK *)sharedInstanceWithAppid:(NSString *)appid;
-
-/**
-  Initialization method
-  After the SDK initialization is complete, the saved instance can be obtained through this api
-
-  @param appId appId
-  @param url server url
-  @return one instance
-  */
-+ (GravityEngineSDK *)startWithAppId:(NSString *)appId withUrl:(NSString *)url;
 
 /**
   Initialization method
@@ -123,15 +115,9 @@ typedef void (^GECallbackBlock)(NSDictionary *result, NSError * _Nullable error)
 /**
  register GravityEngine
  */
-- (void)registerGravityEngine:(NSString *) clientId withUserName:(NSString *)userName withVersion:(NSNumber *)version withCallback:(GECallbackBlock)callback;
+- (void)registerGravityEngineWithClientId:(NSString *) clientId withUserName:(NSString *)userName withVersion:(int)version withAsaToken:(NSString *)asaToken withIdfa:(NSString *) idfa withIdfv:(NSString *)idfv withCaid1:(NSString *)caid1_md5 withCaid2:(NSString *)caid2_md5 withSuccessCallback:(CallbackWithSuccess)successCallback withErrorCallback:(CallbackWithError)errorCallback;
 
-- (void)uploadDeviceInfoWithIdfa:(NSString *) idfa withIdfv:(NSString *)idfv withCaid1:(NSString *)caid1_md5 withCaid2:(NSString *)caid2_md5 withCallback:(GECallbackBlock)callback;
-
-/**
- 登录登出事件上报
- */
-- (void)trackAppLoginEvent;
-- (void)trackAppLogoutEvent;
+- (void)resetClientID:(NSString *) newClientID withSuccessCallback:(CallbackWithSuccess)successCallback withErrorCallback:(CallbackWithError)errorCallback;
 
 /**
  * 上报付费事件
@@ -142,7 +128,7 @@ typedef void (^GECallbackBlock)(NSDictionary *result, NSError * _Nullable error)
  * @param payReason  付费原因 例如：购买钻石、办理月卡
  * @param payMethod  付费方式 例如：支付宝、微信、银联等
  */
-- (void)trackPayEventWithAmount:(NSNumber *)payAmount withPayType:(NSString *)payType withOrderId:(NSString *)orderId withPayReason:(NSString *)payReason withPayMethod:(NSString *)payMethod;
+- (void)trackPayEventWithAmount:(int)payAmount withPayType:(NSString *)payType withOrderId:(NSString *)orderId withPayReason:(NSString *)payReason withPayMethod:(NSString *)payMethod;
 
 /**
  * 上报提现事件
@@ -153,7 +139,7 @@ typedef void (^GECallbackBlock)(NSDictionary *result, NSError * _Nullable error)
  * @param payReason  提现原因 例如：用户首次提现、用户抽奖提现
  * @param payMethod  提现支付方式 例如：支付宝、微信、银联等
  */
-- (void)trackWithdrawEvent:(NSNumber *)payAmount withPayType:(NSString *)payType withOrderId:(NSString *)orderId withPayReason:(NSString *)payReason withPayMethod:(NSString *)payMethod;
+- (void)trackWithdrawEvent:(int)payAmount withPayType:(NSString *)payType withOrderId:(NSString *)orderId withPayReason:(NSString *)payReason withPayMethod:(NSString *)payMethod;
 
 /**
  * 上报广告事件
@@ -178,6 +164,15 @@ typedef void (^GECallbackBlock)(NSDictionary *result, NSError * _Nullable error)
 - (void)trackAdPlayStartEventWithUninType:(NSString *)adUnionType withPlacementId:(NSString *)adPlacementId withSourceId:(NSString *)adSourceId withAdType:(NSString *)adType withAdnType:(NSString *)adAdnType withEcpm:(NSNumber *)ecpm;
 
 - (void)trackAdPlayEndEventWithUninType:(NSString *)adUnionType withPlacementId:(NSString *)adPlacementId withSourceId:(NSString *)adSourceId withAdType:(NSString *)adType withAdnType:(NSString *)adAdnType withEcpm:(NSNumber *)ecpm withDruation:(NSNumber *)duration withIsPlayOver:(BOOL)isPlayOver;
+
+
+/**
+ * 绑定数数账号
+ *
+ * @param taAccountId    数数的account_id
+ * @param taDistinctId  数数的distinct_id
+ */
+- (void)bindTAThirdPlatformWithAccountId:(NSString *)taAccountId withDistinctId:(NSString *)taDistinctId;
 
 #pragma mark - Action Track
 
@@ -257,17 +252,17 @@ typedef void (^GECallbackBlock)(NSDictionary *result, NSError * _Nullable error)
 
 /**
  Login
- Set the account ID. Each setting overrides the previous value. Login events will not be uploaded.
+ Set the account ID. Each setting overrides the previous value. Login events will be uploaded.
 
- @param accountId account ID
+ @param clientId client ID
  */
-- (void)login:(NSString *)accountId;
+- (void)login:(NSString *)clientId;
 
 /**
- Logout
- Clearing the account ID will not upload user logout events.
+ Logout with completion
+ Clearing the account ID and upload user logout events.
  */
-- (void)logout;
+- (void)logoutWithCompletion:(void(^)(void))completion;
 
 /**
  User_Set
@@ -574,7 +569,7 @@ typedef void (^GECallbackBlock)(NSDictionary *result, NSError * _Nullable error)
 /**
  When connecting data with H5, you need to call this interface to configure UserAgent
  */
-- (void)addWebViewUserAgent;
+//- (void)addWebViewUserAgent;
 
 /**
  Set Log level
@@ -588,20 +583,16 @@ typedef void (^GECallbackBlock)(NSDictionary *result, NSError * _Nullable error)
  */
 - (void)flush;
 
+- (void)flushWithCompletion:(void(^)(void))completion;
+
+- (void)testTest;
+
 /**
  Switch reporting status
 
  @param status GETrackStatus reporting status
  */
 - (void)setTrackStatus: (GETrackStatus)status;
-
-- (void)enableTracking:(BOOL)enabled DEPRECATED_MSG_ATTRIBUTE("Please use instance method setTrackStatus: GETrackStatusPause");
-
-- (void)optOutTracking DEPRECATED_MSG_ATTRIBUTE("Please use instance method setTrackStatus: GETrackStatusStop");
-
-- (void)optOutTrackingAndDeleteUser DEPRECATED_MSG_ATTRIBUTE("Please use instance method setTrackStatus: GETrackStatusStop");
-
-- (void)optInTracking DEPRECATED_MSG_ATTRIBUTE("Please use instance method setTrackStatus: GETrackStatusNormal");
 
 + (void)calibrateTimeWithNtp:(NSString *)ntpServer;
 
