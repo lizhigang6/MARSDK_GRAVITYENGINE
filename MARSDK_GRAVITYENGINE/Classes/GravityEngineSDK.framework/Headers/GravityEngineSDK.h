@@ -42,7 +42,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- SDK VERSION = 4.3.1
  GravityEngine API
  
  ## Initialization
@@ -115,7 +114,7 @@ typedef void (^CallbackWithError)(NSError * error);
 /**
  register GravityEngine
  */
-- (void)registerGravityEngineWithClientId:(NSString *) clientId withUserName:(NSString *)userName withVersion:(int)version withAsaToken:(NSString *)asaToken withIdfa:(NSString *) idfa withIdfv:(NSString *)idfv withCaid1:(NSString *)caid1_md5 withCaid2:(NSString *)caid2_md5 withSuccessCallback:(CallbackWithSuccess)successCallback withErrorCallback:(CallbackWithError)errorCallback;
+- (void)registerGravityEngineWithClientId:(NSString *) clientId withUserName:(NSString *)userName withVersion:(int)version withAsaEnable:(bool)enableAsa withIdfa:(NSString *) idfa withIdfv:(NSString *)idfv withCaid1:(NSString *)caid1_md5 withCaid2:(NSString *)caid2_md5 withSuccessCallback:(CallbackWithSuccess)successCallback withErrorCallback:(CallbackWithError)errorCallback;
 
 - (void)resetClientID:(NSString *) newClientID withSuccessCallback:(CallbackWithSuccess)successCallback withErrorCallback:(CallbackWithError)errorCallback;
 

@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		DI4XEF37FcKqoK3wfaWv6iNBVNQ=
-		</data>
 		<key>Headers/GEAutoTrackProtocol.h</key>
 		<data>
 		2ZPYyh7pG1NYb/qjn7PfXXVUCx4=
@@ -62,7 +58,7 @@
 		</data>
 		<key>Headers/GravityEngineSDK.h</key>
 		<data>
-		gWlcnUCw2nwSUiKoTvavziEx9+4=
+		/cvmusdlSFLbggblZ3ILxYTzXcQ=
 		</data>
 		<key>Headers/GravitySDK.h</key>
 		<data>
@@ -230,11 +226,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gWlcnUCw2nwSUiKoTvavziEx9+4=
+			/cvmusdlSFLbggblZ3ILxYTzXcQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			chic5LKjMgIwxuSSvZ7dO7DDsea2JC3zNvBcOsYjqlA=
+			99Hr1hB3HwZWNuy2OJ0SRn6TvKvXQveLP+31xfHK2O4=
 			</data>
 		</dict>
 		<key>Headers/GravitySDK.h</key>
