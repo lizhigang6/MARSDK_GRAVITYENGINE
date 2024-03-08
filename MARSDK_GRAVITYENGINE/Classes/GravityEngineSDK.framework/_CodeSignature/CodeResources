@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/GEDeviceInfo.h</key>
 		<data>
-		oU5z/9WaawGGokeRRL2BJo3J0iM=
+		svtSveXTL3DTSjDs4LT0cqfgmTc=
 		</data>
 		<key>Headers/GEEditableEventModel.h</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Headers/GravityEngineSDK.h</key>
 		<data>
-		fq5bBshYG+lpA42lQp4ZFKvIMOc=
+		IiJ6vkLw+viWVKgDSH2WMqkCqWE=
 		</data>
 		<key>Headers/GravitySDK.h</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		V+QazDSAuqVG8UKBj53t61F3Xok=
+		fxX0jOXUOxozFUXRpuvhQXXNCcg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -127,11 +127,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oU5z/9WaawGGokeRRL2BJo3J0iM=
+			svtSveXTL3DTSjDs4LT0cqfgmTc=
 			</data>
 			<key>hash2</key>
 			<data>
-			qHkjPPLkfQa562ua3b1XSplvYbXo1i5A8jLLVT/LwpI=
+			JhlZHCifb/QiDH4s8Fi5Tg88tkl4FSy5lx1bolusHoI=
 			</data>
 		</dict>
 		<key>Headers/GEEditableEventModel.h</key>
@@ -226,11 +226,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fq5bBshYG+lpA42lQp4ZFKvIMOc=
+			IiJ6vkLw+viWVKgDSH2WMqkCqWE=
 			</data>
 			<key>hash2</key>
 			<data>
-			oeAhiRBRqqrfB8zyLQ+NpgETniuOX5JZrpVd2OOfEOk=
+			1C2UcEJ15RpjRz1KQQTtPabqv226l1i5nPOZEKjv4Ng=
 			</data>
 		</dict>
 		<key>Headers/GravitySDK.h</key>
