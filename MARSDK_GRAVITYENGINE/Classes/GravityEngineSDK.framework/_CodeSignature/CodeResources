@@ -58,7 +58,7 @@
 		</data>
 		<key>Headers/GravityEngineSDK.h</key>
 		<data>
-		IiJ6vkLw+viWVKgDSH2WMqkCqWE=
+		GKy4ldW1VdMQ5tnxNYW3ZAM3Wbo=
 		</data>
 		<key>Headers/GravitySDK.h</key>
 		<data>
@@ -70,11 +70,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		fxX0jOXUOxozFUXRpuvhQXXNCcg=
+		khCnDBrtZTlNiBWAa4UaeSDw5nU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		MzLthyQ7aajebc/OA9Zf2kc4JEk=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		fh8OMg52bBcwBc0aloTqzllFH8A=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -226,11 +230,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IiJ6vkLw+viWVKgDSH2WMqkCqWE=
+			GKy4ldW1VdMQ5tnxNYW3ZAM3Wbo=
 			</data>
 			<key>hash2</key>
 			<data>
-			1C2UcEJ15RpjRz1KQQTtPabqv226l1i5nPOZEKjv4Ng=
+			bBGil+Ss+bntMD8EYKHnGOc/fKU3lHegOLqmqB0R4QI=
 			</data>
 		</dict>
 		<key>Headers/GravitySDK.h</key>
@@ -264,6 +268,17 @@
 			<key>hash2</key>
 			<data>
 			x2uuYj9zFEon1bAwThSWI7hpmIaRh9WiXDKc/W8p9Wg=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			fh8OMg52bBcwBc0aloTqzllFH8A=
+			</data>
+			<key>hash2</key>
+			<data>
+			dYSXmHpYREIqQGsxjPWNsuJR1xiIzmsPLLQCHj3B3mk=
 			</data>
 		</dict>
 	</dict>
