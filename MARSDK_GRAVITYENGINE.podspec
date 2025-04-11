@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MARSDK_GRAVITYENGINE'
-  s.version          = '5.2.2'
+  s.version          = '5.2.3'
   s.summary          = '火星人打包工具'
 
 
